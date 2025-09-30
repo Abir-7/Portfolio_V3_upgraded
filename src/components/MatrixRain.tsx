@@ -32,7 +32,7 @@ export function MatrixRain() {
 
     const getThemeColor = () => {
       const root = document.documentElement;
-      return getComputedStyle(root).getPropertyValue("--accent") || "#05df72";
+      return getComputedStyle(root).getPropertyValue("--primary") || "#05df72";
     };
 
     const draw = () => {
@@ -74,7 +74,7 @@ export function MatrixRain() {
       ref={canvasRef}
       className="sticky top-0 left-0 w-full h-full pointer-events-none z-0"
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      animate={{ opacity: 0.9 }}
       transition={{ duration: 2 }}
     />
   );

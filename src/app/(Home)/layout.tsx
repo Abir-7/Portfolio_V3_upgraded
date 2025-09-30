@@ -52,8 +52,8 @@ const Layout = ({ children }: LayoutProps) => {
 
           {/* Terminal content */}
           <div
-            className={`absolute inset-0  ${
-              path === "/" ? "" : "backdrop-blur-[0.9px]"
+            className={`absolute bg-transparent inset-0  ${
+              path === "/" ? "backdrop-blur-[0.9px]" : "backdrop-blur-[2px]"
             }`}
           >
             <div className="p-4">{children}</div>
