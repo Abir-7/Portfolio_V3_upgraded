@@ -14,7 +14,7 @@ export function MatrixSkillCard({ skill, status, icon }: MatrixSkillCardProps) {
   const [hover, setHover] = useState(false);
 
   return (
-    <div className="w-80 sm:max-w-80 sm:w-full">
+    <div className="sm:max-w-80 sm:w-full">
       <Card
         className={`relative p-0 bg-[var(--card)] border-[var(--border)] hover:border-[var(--accent)] hover:shadow-[var(--accent)]/30 backdrop-blur-sm transition-all duration-300 overflow-hidden group`}
         onMouseEnter={() => setHover(true)}
@@ -28,7 +28,7 @@ export function MatrixSkillCard({ skill, status, icon }: MatrixSkillCardProps) {
         </div>
 
         {/* Icon */}
-        <div className="z-10 flex justify-center my-4">
+        <div className="z-10 flex justify-center ">
           <div className="w-20 text-[var(--accent-foreground)]">{icon}</div>
         </div>
 

@@ -72,7 +72,7 @@ export function MatrixRain() {
   return (
     <motion.canvas
       ref={canvasRef}
-      className="absolute top-0 left-0 w-full h-full pointer-events-none z-0"
+      className="sticky top-0 left-0 w-full h-full pointer-events-none z-0"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 2 }}

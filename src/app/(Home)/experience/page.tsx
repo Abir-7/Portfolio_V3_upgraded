@@ -29,7 +29,7 @@ export default function ExperiencePage() {
     <div className="text-[var(--foreground)] font-sans">
       <div className="space-y-6">
         {experiences.map((exp, idx) => (
-          <div key={idx} className="p-4 rounded-xl shadow-lg  ">
+          <div key={idx} className="rounded-xl shadow-lg  ">
             <h2 className="text-2xl font-semibold mb-4 border-b border-[var(--border)] pb-2">
               {">"} <GlitchText text={exp.company} />
             </h2>
