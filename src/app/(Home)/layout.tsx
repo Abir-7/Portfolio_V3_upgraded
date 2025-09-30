@@ -52,7 +52,7 @@ const Layout = ({ children }: LayoutProps) => {
 
           {/* Terminal content */}
           <div
-            className={`absolute inset-0 z-10  ${
+            className={`absolute inset-0  ${
               path === "/" ? "" : "backdrop-blur-[0.9px]"
             }`}
           >
