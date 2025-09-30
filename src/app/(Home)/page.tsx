@@ -12,7 +12,7 @@ import gif3 from "@/assets/gif3.gif"; // black
 import { Button } from "@/components/ui/button";
 
 const Page = () => {
-  const [theme, setTheme] = useState("matrix-green"); // default
+  const [theme, setTheme] = useState("matrix-black"); // default
 
   // Watch <html data-matrix-theme="">
   useEffect(() => {
