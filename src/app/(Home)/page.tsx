@@ -65,7 +65,7 @@ const Page = () => {
       {/* Right Section */}
       <div className="w-full flex justify-center order-1 lg:order-2">
         <div
-          className="glitch w-full max-w-lg aspect-[4/3] opacity-80" // aspect-video for 16:9 ratio
+          className="glitch w-full max-w-lg aspect-[4/3] " // aspect-video for 16:9 ratio
           style={{
             backgroundImage: `url(${currentGif.src})`,
             backgroundSize: "cover",
