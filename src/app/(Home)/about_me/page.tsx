@@ -14,7 +14,7 @@ export default function AbirResumePage() {
           <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
             Md. Tazwarul Islam Abir
           </h1>
-          <p className="mt-2 text-sm sm:text-base opacity-90">
+          <p className="mt-2 text-sm sm:text-base opacity-90  text-[var(--accent-foreground)]">
             Passionate and motivated junior MERN stack developer committed to
             delivering high-quality code and exceptional user experiences.
             Skilled with React, Express, MongoDB, and Node.js.
@@ -25,7 +25,7 @@ export default function AbirResumePage() {
           <h2 className="text-2xl font-semibold mb-3 border-b border-[var(--primary)]/40 pb-2">
             <GlitchText text="Profile" />
           </h2>
-          <p className="text-sm sm:text-base leading-relaxed opacity-95">
+          <p className="text-sm sm:text-base leading-relaxed opacity-95  text-[var(--accent-foreground)]">
             I aim to utilize my skills in React, Next.js, Node.js, Express,
             MongoDB, PostgreSQL, Drizzle ORM, TypeScript, JavaScript, Tailwind
             CSS, and ShadCN UI to drive impactful results and contribute to the
@@ -40,36 +40,36 @@ export default function AbirResumePage() {
           </h2>
 
           <div className="mt-3 grid gap-4">
-            <div>
-              <h3 className="font-semibold">
-                Bachelor of Science (B.Sc) — Computer Science &amp; Engineering
-                (CSE)
+            <div className=" text-[var(--accent-foreground)]">
+              <h3 className="font-semibold  ">
+                {">"} Bachelor of Science (B.Sc) — Computer Science &amp;
+                Engineering (CSE):
               </h3>
-              <p className="text-sm opacity-90">
+              <p className="text-sm   text-[var(--accent-foreground)]">
                 Institute: College of Business Science &amp; Technology
                 (National University Affiliated), Mymensingh
               </p>
-              <p className="text-sm opacity-90">CGPA: 3.05</p>
+              <p className="text-sm">CGPA: 3.05</p>
             </div>
 
-            <div>
+            <div className="  text-[var(--accent-foreground)]">
               <h3 className="font-semibold">
-                Higher Secondary School Certificate (HSC)
+                {">"} Higher Secondary School Certificate (HSC):
               </h3>
-              <p className="text-sm opacity-90">
+              <p className="text-sm ">
                 Institute: Royal Media College, Mymensingh-RMC
               </p>
-              <p className="text-sm opacity-90">Subject: Science — GPA: 4.42</p>
+              <p className="text-sm ">Subject: Science — GPA: 4.42</p>
             </div>
 
-            <div>
+            <div className=" text-[var(--accent-foreground)]">
               <h3 className="font-semibold">
-                Secondary School Certificate (SSC)
+                {">"} Secondary School Certificate (SSC):
               </h3>
-              <p className="text-sm opacity-90">
+              <p className="text-sm ">
                 Institute: Mymensingh Laboratory High School
               </p>
-              <p className="text-sm opacity-90">Subject: Science — GPA: 3.81</p>
+              <p className="text-sm ">Subject: Science — GPA: 3.81</p>
             </div>
           </div>
         </section>
@@ -78,7 +78,7 @@ export default function AbirResumePage() {
           <h2 className="text-2xl font-semibold border-b border-[var(--primary)]/40 pb-2">
             <GlitchText text="Hobbies" />
           </h2>
-          <ul className="mt-2 text-sm list-disc list-inside">
+          <ul className="mt-2 text-sm list-disc list-inside text-[var(--accent-foreground)]">
             <li>PC gaming</li>
             <li>Nature photography</li>
             <li>Playing outdoor games like football and cricket</li>

@@ -36,7 +36,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="text-[var(--accent-foreground)] font-sans">
+    <div className="  text-[var(--foreground)] font-sans">
       <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Left Column - Contact Info */}
         <div className="flex flex-col gap-6">
@@ -44,21 +44,25 @@ export default function ContactPage() {
             <h2 className="text-xl font-semibold mb-1">
               <GlitchText text="Email" />
             </h2>
-            <p className="text-sm opacity-90">md.tazwarul.islam.07@gmail.com</p>
+            <p className="text-sm text-[var(--accent-foreground)] ">
+              md.tazwarul.islam.07@gmail.com
+            </p>
           </section>
 
           <section>
             <h2 className="text-xl font-semibold mb-1">
               <GlitchText text="Phone" />
             </h2>
-            <p className="text-sm opacity-90">+8801795377643</p>
+            <p className="text-sm text-[var(--accent-foreground)]  ">
+              +8801795377643
+            </p>
           </section>
 
           <section>
             <h2 className="text-xl font-semibold mb-1">
               <GlitchText text="Address" />
             </h2>
-            <p className="text-sm opacity-90">
+            <p className="text-sm text-[var(--accent-foreground)] ">
               35/3 Maskanda, Mymensingh, Bangladesh
             </p>
           </section>
@@ -108,7 +112,7 @@ export default function ContactPage() {
               value={form.name}
               onChange={handleChange}
               placeholder="Your Name"
-              className="p-2 rounded-md outline-0 border border-[var(--border)] text-[var(--foreground)] bg-[var(--card)]"
+              className="p-2 rounded-md placeholder: outline-0 border border-[var(--border)] text-[var(--accent-foreground)] bg-[var(--card)]"
             />
             <input
               type="email"
@@ -116,14 +120,14 @@ export default function ContactPage() {
               value={form.email}
               onChange={handleChange}
               placeholder="Your Email"
-              className="p-2 rounded-md outline-0 border border-[var(--border)] text-[var(--foreground)] bg-[var(--card)]"
+              className="p-2 rounded-md outline-0 border border-[var(--border)] text-[var(--accent-foreground)] bg-[var(--card)]"
             />
             <textarea
               name="message"
               value={form.message}
               onChange={handleChange}
               placeholder="Your Message"
-              className="p-2 rounded-md outline-0 border border-[var(--border)] text-[var(--foreground)] bg-[var(--card)] h-32 resize-none"
+              className="p-2 rounded-md outline-0 border border-[var(--border)] text-[var(--accent-foreground)] bg-[var(--card)] h-32 resize-none"
             />
             <button
               type="submit"

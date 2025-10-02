@@ -107,7 +107,7 @@
 
 [data-matrix-theme="matrix-green"] {
   --background: oklch(0.05 0.05 150);
-  --foreground: oklch(0.85 0.15 145);
+  --foreground: oklch(82.158% 0.15748 144.859);
   --card: oklch(0.08 0.04 150);
   --card-foreground: oklch(0.85 0.15 145);
   --popover: oklch(0.06 0.05 150);
@@ -119,7 +119,7 @@
   --muted: oklch(0.12 0.05 150);
   --muted-foreground: oklch(0.55 0.12 145);
   --accent: oklch(0.45 0.16 145);
-  --accent-foreground: oklch(0.95 0.1 145);
+  --accent-foreground: oklch(86.238% 0.12169 144.468);
   --destructive: oklch(0.45 0.2 25);
   --destructive-foreground: oklch(0.95 0 0);
   --border: oklch(0.2 0.08 150);
