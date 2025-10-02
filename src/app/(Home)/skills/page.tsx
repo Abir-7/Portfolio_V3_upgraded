@@ -319,6 +319,7 @@ export default function Home() {
           skill={s.skill}
           status={s.status}
           icon={s.icon}
+          index={i}
         />
       ))}
     </div>

@@ -46,17 +46,17 @@ const Layout = ({ children }: LayoutProps) => {
         </div>
 
         {/* Terminal Body */}
-        <div className="relative flex-1 h-full font-mono  text-[var(--foreground)] text-base overflow-auto">
+        <div className="relative flex-1 h-full font-mono  text-[var(--foreground)] text-base overflow-x-hidden overflow-y-auto">
           {/* Matrix background */}
           <MatrixRain />
 
           {/* Terminal content */}
           <div
             className={`absolute bg-transparent inset-0  ${
-              path === "/" ? "backdrop-blur-[0.9px]" : "backdrop-blur-[2px]"
+              path === "/" ? "backdrop-blur-[0.9px]" : "backdrop-blur-[1.5px]"
             }`}
           >
-            <div className="p-4">{children}</div>
+            <div className="p-4 h-full">{children}</div>
           </div>
         </div>
 

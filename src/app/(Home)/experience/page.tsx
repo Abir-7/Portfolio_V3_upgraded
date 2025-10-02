@@ -2,13 +2,14 @@
 
 import { GlitchText } from "@/components/GlitchText";
 import React from "react";
+import { motion, Variants } from "framer-motion";
 
 interface Experience {
   company: string;
   position: string;
   joined: string;
   status: string;
-  description?: string[]; // optional bullet points
+  description?: string[];
 }
 
 const experiences: Experience[] = [
@@ -24,39 +25,80 @@ const experiences: Experience[] = [
   },
 ];
 
+const container: Variants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2, // each card delayed
+    },
+  },
+};
+
+const card: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+      delayChildren: 0.2, // after card animates, delay before bullets
+      staggerChildren: 0.15, // bullets come one by one
+    },
+  },
+};
+
+const bullet: Variants = {
+  hidden: { opacity: 0, x: -10 },
+  show: { opacity: 1, x: 0, transition: { duration: 0.4 } },
+};
+
 export default function ExperiencePage() {
   return (
-    <div className="text-[var(--foreground)] font-sans">
+    <motion.div
+      className="text-[var(--foreground)] font-sans"
+      variants={container}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.2 }}
+    >
       <div className="space-y-6">
         {experiences.map((exp, idx) => (
-          <div key={idx} className="rounded-xl shadow-lg  ">
-            <h2 className="text-2xl font-semibold mb-4 border-b border-[var(--border)] pb-2">
+          <motion.div
+            key={idx}
+            className="rounded-xl shadow-lg p-4 border border-[var(--border)] bg-[var(--background)]"
+            variants={card}
+          >
+            <h2 className="text-2xl font-semibold mb-4 border-b border-[var(--border)] pb-2 flex items-center">
               {">"} <GlitchText text={exp.company} />
             </h2>
             <ul className="text-sm sm:text-base space-y-2 text-[var(--accent-foreground)]">
-              <li>
+              <motion.li variants={bullet}>
                 <span className="font-semibold">Position:</span> {exp.position}
-              </li>
-              <li>
+              </motion.li>
+              <motion.li variants={bullet}>
                 <span className="font-semibold">Joined:</span> {exp.joined}
-              </li>
-              <li>
+              </motion.li>
+              <motion.li variants={bullet}>
                 <span className="font-semibold">Status:</span> {exp.status}
-              </li>
+              </motion.li>
               {exp.description && (
-                <li>
+                <motion.li variants={bullet}>
                   <span className="font-semibold">Responsibilities:</span>
                   <ul className="list-disc list-inside ml-4 space-y-1">
                     {exp.description.map((desc, i) => (
-                      <li key={i}>{desc}</li>
+                      <motion.li key={i} variants={bullet}>
+                        {desc}
+                      </motion.li>
                     ))}
                   </ul>
-                </li>
+                </motion.li>
               )}
             </ul>
-          </div>
+          </motion.div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }
